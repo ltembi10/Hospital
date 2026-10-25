@@ -1,0 +1,27 @@
+**Design Memo**
+
+A tree is appropriate for the doctor structure because it shows 
+relationships between doctors in a clear hierarchy. Each doctor can 
+have a manager above them and other doctors reporting under them. 
+Using a binary tree makes it possible to organize these relationships
+ through left and right child nodes. It also allows the program to 
+ search for a parent and add a new doctor in the correct position.
+Software engineers use preorder, inorder, and postorder traversals 
+for different purposes. Preorder visits the parent before its children
+ and can be useful for copying a tree or displaying a hierarchy. 
+ Inorder visits the left subtree, the parent, and then the right 
+ subtree. It is useful for retrieving sorted values from a binary 
+ search tree. Postorder visits the children before the parent and 
+ can be useful when deleting a tree or processing files and folders 
+ from the bottom up.
+Heaps help simulate real-time systems like emergency patient intake 
+because they allow patients to be organized by urgency. In this 
+program, a lower urgency number means a patient needs attention sooner.
+The patient with the smallest number stays at the top of the min-heap
+and can be retrieved quickly. When a new patient arrives, 
+heapify_up restores the heap order. When a patient is removed, 
+heapify_down restores the order again. This makes it easier to 
+manage changing priorities without sorting the entire list after 
+every operation. However, a real emergency department must also 
+consider clinical assessments and other triage rules, not just a 
+single number.
